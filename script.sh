@@ -13,9 +13,9 @@ yum install -y nodejs
 # install  git
 yum install -y git
 # install  java
-yum install java-1.8.0-openjdk
+yum install -y java-1.8.0-openjdk
 # install maven
-yum install maven
+yum install -y maven
 echo '-----------------------------------------------------'
 echo 'Hi this is  exited execution from script file'
 echo '-----------------------------------------------------'
