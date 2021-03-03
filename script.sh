@@ -11,6 +11,7 @@ echo '-----------------------------------------------------'
 yum install -y docker
 systemctl enable docker.service
 systemctl start docker.service
+chmod 666 /var/run/docker.sock
 groupadd docker
 gpasswd -a $username docker
 newgrp docker
