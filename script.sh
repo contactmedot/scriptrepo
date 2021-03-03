@@ -18,12 +18,12 @@ echo '-----------------------------------------------------'
 echo 'Hi installing docker Completed from script file'
 echo '-----------------------------------------------------'
 # install node
-#echo '-----------------------------------------------------'
-#echo 'Hi installing node from script file'
-#echo '-----------------------------------------------------'
-# yum -y install -y curl
-# curl https://rpm.nodesource.com/setup_12.x | bash -
-# yum install -y nodejs
+echo '-----------------------------------------------------'
+echo 'Hi installing node from script file'
+echo '-----------------------------------------------------'
+yum -y install -y curl
+curl https://rpm.nodesource.com/setup_12.x | bash -
+yum install -y nodejs
 echo '-----------------------------------------------------'
 echo 'Hi node installation completed from script file'
 echo '-----------------------------------------------------'
@@ -31,7 +31,7 @@ echo '-----------------------------------------------------'
 echo '-----------------------------------------------------'
 echo 'Hi installing git from script file'
 echo '-----------------------------------------------------'
-#yum install -y git
+yum install -y git
 echo '-----------------------------------------------------'
 echo 'Hi git installation completed from script file'
 echo '-----------------------------------------------------'
@@ -39,7 +39,7 @@ echo '-----------------------------------------------------'
 echo '-----------------------------------------------------'
 echo 'Hi installing java from script file'
 echo '-----------------------------------------------------'
-# yum install -y java-1.8.0-openjdk
+yum install -y java-1.8.0-openjdk
 echo '-----------------------------------------------------'
 echo 'Hi java installation completed from script file'
 echo '-----------------------------------------------------'
@@ -47,7 +47,7 @@ echo '-----------------------------------------------------'
 echo '-----------------------------------------------------'
 echo 'Hi installing maven from script file'
 echo '-----------------------------------------------------'
-# yum install -y maven
+yum install -y maven
 echo '-----------------------------------------------------'
 echo 'Hi maven installation completed from script file'
 echo '-----------------------------------------------------'
