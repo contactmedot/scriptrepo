@@ -1,2 +1,4 @@
-# to run the script  enter  following command first navigate to the folder where you have saved  the file  and run following cmd
-./script.sh
+# To run the script do following steps:
+1.first navigate to the folder where you have saved  the file  and run following cmd.
+2. run cmd : chmod +x script.sh.
+3.run command: ./script.sh.
