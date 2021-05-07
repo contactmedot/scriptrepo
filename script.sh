@@ -79,6 +79,6 @@ newgrp docker
 echo '-----------------------------------------------------'
 echo 'you can check version for  install tool with node -v; npm -version;java -version;docker --version;git --version;mvn -v;'
 echo '-----------------------------------------------------'
-node -v; npm -version;java -version;docker --version;git --version;mvn -v;kubectl version --client -o json; az version
+node -v; npm -version;java -version;docker --version;git --version;mvn -v;kubectl version --client -o json; az version;
 echo '-----------------------------------------------------'
 echo 'Hi exited execution from script file'
