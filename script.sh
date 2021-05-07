@@ -53,6 +53,9 @@ echo '-----------------------------------------------------'
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod 755 kubectl
 mv ./kubectl /usr/local/bin/kubectl
+echo '-----------------------------------------------------'
+echo 'Hi kubectl installation completed from script file'
+echo '-----------------------------------------------------'
 # Azure CLI Install
 echo ' starting Azure CLI install'
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -64,9 +67,7 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/azure-cli.repo
 yum  install azure-cli -y
 echo 'CLI install completed'
-echo '-----------------------------------------------------'
-echo 'Hi maven installation completed from script file'
-echo '-----------------------------------------------------'
+
 echo 'Hi setiing up docker  properties'mv ./kubectl /usr/local/bin/kubectl
 systemctl enable docker.service
 systemctl start docker.service
