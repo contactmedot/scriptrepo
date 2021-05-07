@@ -46,8 +46,28 @@ yum install -y maven
 echo '-----------------------------------------------------'
 echo 'Hi maven installation completed from script file'
 echo '-----------------------------------------------------'
-echo 'Hi setiing up docker  properties'
-
+# install kubectl
+echo '-----------------------------------------------------'
+echo 'Hi installing kubectl from script file'
+echo '-----------------------------------------------------'
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod 755 kubectl
+mv ./kubectl /usr/local/bin/kubectl
+# Azure CLI Install
+echo ' starting Azure CLI install'
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[azure-cli]
+name=Azure CLI
+baseurl=https://packages.microsoft.com/yumrepos/azure-cli
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/azure-cli.repo
+yum  install azure-cli -y
+echo 'CLI install completed'
+echo '-----------------------------------------------------'
+echo 'Hi maven installation completed from script file'
+echo '-----------------------------------------------------'
+echo 'Hi setiing up docker  properties'mv ./kubectl /usr/local/bin/kubectl
 systemctl enable docker.service
 systemctl start docker.service
 chmod 666 /var/run/docker.sock
@@ -58,6 +78,6 @@ newgrp docker
 echo '-----------------------------------------------------'
 echo 'you can check version for  install tool with node -v; npm -version;java -version;docker --version;git --version;mvn -v;'
 echo '-----------------------------------------------------'
-node -v; npm -version;java -version;docker --version;git --version;mvn -v
+node -v; npm -version;java -version;docker --version;git --version;mvn -v;kubectl version --client -o json;
 echo '-----------------------------------------------------'
 echo 'Hi exited execution from script file'
