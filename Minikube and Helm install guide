@@ -1,0 +1,23 @@
+# Minikube run the  following commands  line by line. Use  root  user.
+1.yum update -y
+2.wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+3.chmod +x minikube-linux-amd64
+4.mv minikube-linux-amd64 /usr/local/bin/minikube 
+5.sestatus
+6.systemctl status firewalld
+7.systemctl disable firewalld
+8.systemctl stop firewalld
+9.chmod 755 minikube(by going into /usr/local/bin)
+10.yum install -y conntrack
+11.systemctl  restart docker
+12.service docker status
+Use  normal  user  to  start minikube not root user
+13.minikube start
+14.docker run -dp 8088:8088 docker/getting-started
+15.docker run --expose 8088 -d -p 127.0.0.1:8088:8088/tcp docker/getting-started
+
+# Helm install commands
+1.yum update -y
+2.wget https://get.helm.sh/helm-v3.5.2-linux-amd64.tar.gz --no-check-certificate
+3.tar -zxvf helm-v3.5.2-linux-amd64.tar.gz
+4.mv linux-amd64/helm /usr/local/bin/helm
